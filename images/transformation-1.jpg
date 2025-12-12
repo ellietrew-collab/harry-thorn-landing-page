@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" fill="none">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0f0f0"/>
+      <stop offset="100%" style="stop-color:#d0d0d0"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="500" fill="url(#bg1)"/>
+  <!-- Before/After split -->
+  <line x1="200" y1="0" x2="200" y2="500" stroke="#1a1a2e" stroke-width="4"/>
+  <!-- Before side -->
+  <text x="100" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1a1a2e">BEFORE</text>
+  <circle cx="100" cy="150" r="40" fill="#aaa"/>
+  <ellipse cx="100" cy="320" rx="60" ry="120" fill="#aaa"/>
+  <!-- After side -->
+  <text x="300" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#e94560">AFTER</text>
+  <circle cx="300" cy="150" r="40" fill="#1a1a2e"/>
+  <ellipse cx="300" cy="320" rx="50" ry="110" fill="#1a1a2e"/>
+  <!-- Results text -->
+  <rect x="250" y="450" width="100" height="30" rx="15" fill="#e94560"/>
+  <text x="300" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#fff">-15kg</text>
+</svg>
