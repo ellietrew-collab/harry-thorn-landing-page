@@ -41,6 +41,10 @@ body {
   overflow-x: hidden;
 }
 
+h2 {
+  font-weight: 400;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -66,7 +70,8 @@ ul {
   padding: var(--spacing-sm);
   position: sticky;
   top: 0;
-  z-index: 100;
+  margin: 0;
+  width: 100%;
 }
 
 .header-content {
@@ -74,6 +79,8 @@ ul {
   align-items: center;
   justify-content: center;
   gap: var(--spacing-xs);
+  color: white;
+  text-align: center;
 }
 
 .logo-img {
@@ -111,6 +118,7 @@ ul {
   font-weight: 400;
   color: var(--color-text-light);
   line-height: 1.4;
+  text-align: center;
 }
 
 /* Video Section */
@@ -134,7 +142,6 @@ ul {
 /* CTA Section */
 .cta-section {
   text-align: center;
-  padding: var(--spacing-md) 0;
 }
 
 /* Button Styles */
@@ -148,12 +155,18 @@ ul {
   border-radius: var(--border-radius);
   cursor: pointer;
   transition: var(--transition);
+  width: auto;
+}
+
+.btn:hover {
+  background-color: white;
+  color: var(--color-accent);
+  border: 2px solid var(--color-accent);
 }
 
 .btn-primary {
   background-color: var(--color-accent);
   color: var(--color-text-white);
-  width: 100%;
   max-width: 300px;
 }
 
@@ -168,6 +181,10 @@ ul {
   font-size: 0.9rem;
 }
 
+#last-cta-button {
+  margin-top: 20px;
+}
+
 /* Thin Banner */
 .thin-banner {
   background-color: var(--color-accent);
@@ -179,13 +196,10 @@ ul {
 .thin-banner h3 {
   color: var(--color-text-white);
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 /* Comparison Section */
-.comparison-section {
-  padding: var(--spacing-md) 0;
-}
 
 .comparison-container {
   display: flex;
@@ -203,7 +217,7 @@ ul {
 }
 
 .comparison-right {
-  background-color: var(--color-primary);
+  background-color: #202d50;
   color: var(--color-text-white);
 }
 
@@ -235,7 +249,7 @@ ul {
   content: "✓";
   position: absolute;
   left: 0;
-  color: var(--color-accent);
+  color: rgb(155, 244, 155);
 }
 
 /* Fat Loss Section */
@@ -312,26 +326,21 @@ ul {
 .guarantee-title {
   color: var(--color-text-white);
   font-size: 1.25rem;
-  font-weight: 700;
 }
 
 /* Transformations Section */
 .transformations-section {
-  padding: var(--spacing-md) 0;
-}
-
-.transformation-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--spacing-sm);
+  gap: 40px;
 }
 
 .transformation-img {
   width: 100%;
+  height: 400px;
   aspect-ratio: 3 / 4;
   object-fit: cover;
   border-radius: var(--border-radius);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
 }
 
 /* FAQ Section */
