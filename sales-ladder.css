@@ -45,6 +45,12 @@ h2 {
   font-weight: 400;
 }
 
+h3 {
+  font-size: 15px;
+  letter-spacing: 1.3px;
+  font-weight: 400;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -64,6 +70,11 @@ ul {
   display: none !important;
 }
 
+hr {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: var(--spacing-md) 0;
+}
 /* Header Banner */
 .header-banner {
   background-color: var(--color-primary);
@@ -102,7 +113,6 @@ ul {
 /* Tagline Section */
 .tagline-section {
   text-align: center;
-  padding: var(--spacing-md) 0;
 }
 
 .tagline {
@@ -119,6 +129,20 @@ ul {
   color: var(--color-text-light);
   line-height: 1.4;
   text-align: center;
+}
+
+.challenge-link {
+  font-size: 1rem;
+  color: var(--color-accent);
+  margin-bottom: 8px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 18px;
+}
+
+#click-text {
+  font-weight: lighter;
+  color: #666666;
 }
 
 /* Video Section */
@@ -142,6 +166,11 @@ ul {
 /* CTA Section */
 .cta-section {
   text-align: center;
+}
+
+.cta-quote {
+  text-align: center;
+  font-size: 15px;
 }
 
 /* Button Styles */
@@ -170,6 +199,20 @@ ul {
   max-width: 300px;
 }
 
+#challenge-button {
+  background-color: rgb(137, 208, 255);
+  border-radius: 10px;
+  color: #1a1a2e;
+  font-size: 15px;
+  padding: 10px;
+  width: auto;
+  cursor: pointer;
+}
+
+.btn-primary {
+  font-size: 1 rem;
+}
+
 .btn-primary:active {
   transform: scale(0.98);
 }
@@ -178,25 +221,35 @@ ul {
   margin-top: var(--spacing-sm);
   font-style: italic;
   color: var(--color-text-light);
-  font-size: 0.9rem;
 }
 
 #last-cta-button {
   margin-top: 20px;
 }
 
+.email-button-container {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
 /* Thin Banner */
 .thin-banner {
   background-color: var(--color-accent);
-  padding: var(--spacing-sm);
+  padding: 5px;
   margin: var(--spacing-md) calc(-1 * var(--spacing-sm));
   text-align: center;
 }
 
+.thin-banner.blue {
+  background-color: #16213e;
+}
+
 .thin-banner h3 {
   color: var(--color-text-white);
-  font-size: 1rem;
+  font-size: 15px;
   font-weight: 500;
+  letter-spacing: 1.5px;
 }
 
 /* Comparison Section */
@@ -254,7 +307,7 @@ ul {
 
 /* Fat Loss Section */
 .fat-loss-section {
-  padding: var(--spacing-md) 0;
+  padding-top: var(--spacing-md);
 }
 
 .section-title {
@@ -344,9 +397,6 @@ ul {
 }
 
 /* FAQ Section */
-.faq-section {
-  padding: var(--spacing-md) 0;
-}
 
 .faq-item {
   margin-bottom: var(--spacing-sm);
@@ -402,7 +452,7 @@ ul {
 
 /* Email Section */
 .email-section {
-  padding: var(--spacing-md) 0;
+  padding: 0;
   text-align: center;
 }
 
