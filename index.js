@@ -1,20 +1,30 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // FAQ Accordion functionality
-  const faqQuestions = document.querySelectorAll(".faq-question");
+  console.log("JavaScript loaded"); // Debug log
 
-  faqQuestions.forEach((question) => {
-    question.addEventListener("click", function () {
-      const faqItem = this.parentElement;
-      const isActive = faqItem.classList.contains("active");
+  // FAQ Accordion functionality
+  const faqItems = document.querySelectorAll(".faq-item");
+  console.log("Found FAQ items:", faqItems.length); // Debug log
+
+  faqItems.forEach((item, index) => {
+    const question = item.querySelector(".faq-question");
+
+    // Remove any existing event listeners by cloning
+    const newQuestion = question.cloneNode(true);
+    question.parentNode.replaceChild(newQuestion, question);
+
+    // Add click event
+    newQuestion.addEventListener("click", function (e) {
+      console.log("FAQ clicked:", index); // Debug log
+
+      const isActive = item.classList.contains("active");
 
       // Close all FAQs
-      document.querySelectorAll(".faq-item").forEach((item) => {
-        item.classList.remove("active");
-      });
+      faqItems.forEach((faq) => faq.classList.remove("active"));
 
       // Open clicked FAQ if it wasn't active
       if (!isActive) {
-        faqItem.classList.add("active");
+        item.classList.add("active");
+        console.log("FAQ opened:", index); // Debug log
       }
     });
   });
@@ -25,7 +35,6 @@ document.addEventListener("DOMContentLoaded", function () {
   if (emailForm) {
     emailForm.addEventListener("submit", function (e) {
       e.preventDefault();
-
       const formData = new FormData(emailForm);
 
       fetch("/", {
