@@ -2,33 +2,21 @@
 document.addEventListener("DOMContentLoaded", function () {
   const faqItems = document.querySelectorAll(".faq-item");
 
-  faqItems.forEach(function (item) {
-    const question = item.querySelector(".faq-question");
-
-    question.addEventListener("click", function () {
-      // Close other open items
-      faqItems.forEach(function (otherItem) {
-        if (otherItem !== item && otherItem.classList.contains("active")) {
-          otherItem.classList.remove("active");
-        }
-      });
-
-      // Toggle current item
-      item.classList.toggle("active");
-    });
-  });
-});
-
-// Email handling
-
-// FAQ Accordion functionality
-document.addEventListener("DOMContentLoaded", function () {
-  const faqItems = document.querySelectorAll(".faq-item");
-
   faqItems.forEach((item) => {
     const question = item.querySelector(".faq-question");
 
-    question.addEventListener("click", () => {
+    // Add both click and touch events for mobile
+    question.addEventListener("click", function (e) {
+      e.preventDefault();
+      toggleFAQ();
+    });
+
+    question.addEventListener("touchstart", function (e) {
+      e.preventDefault();
+      toggleFAQ();
+    });
+
+    function toggleFAQ() {
       const isActive = item.classList.contains("active");
 
       // Close all FAQ items
@@ -38,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (!isActive) {
         item.classList.add("active");
       }
-    });
+    }
   });
 
   // Email form submission handler
@@ -56,9 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
         body: new URLSearchParams(formData).toString(),
       })
         .then(() => {
-          // Show success message
           alert("Thanks! Harry will be in touch 😊");
-          // Reset the form
           emailForm.reset();
         })
         .catch((error) => {
