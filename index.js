@@ -1,32 +1,22 @@
-// FAQ Accordion functionality
 document.addEventListener("DOMContentLoaded", function () {
-  const faqItems = document.querySelectorAll(".faq-item");
+  // FAQ Accordion functionality
+  const faqQuestions = document.querySelectorAll(".faq-question");
 
-  faqItems.forEach((item) => {
-    const question = item.querySelector(".faq-question");
+  faqQuestions.forEach((question) => {
+    question.addEventListener("click", function () {
+      const faqItem = this.parentElement;
+      const isActive = faqItem.classList.contains("active");
 
-    // Add both click and touch events for mobile
-    question.addEventListener("click", function (e) {
-      e.preventDefault();
-      toggleFAQ();
-    });
+      // Close all FAQs
+      document.querySelectorAll(".faq-item").forEach((item) => {
+        item.classList.remove("active");
+      });
 
-    question.addEventListener("touchstart", function (e) {
-      e.preventDefault();
-      toggleFAQ();
-    });
-
-    function toggleFAQ() {
-      const isActive = item.classList.contains("active");
-
-      // Close all FAQ items
-      faqItems.forEach((faq) => faq.classList.remove("active"));
-
-      // Open clicked item if it wasn't active
+      // Open clicked FAQ if it wasn't active
       if (!isActive) {
-        item.classList.add("active");
+        faqItem.classList.add("active");
       }
-    }
+    });
   });
 
   // Email form submission handler
