@@ -423,6 +423,8 @@ hr {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
 }
 
 .faq-icon {
