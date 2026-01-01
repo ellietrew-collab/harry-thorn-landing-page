@@ -15,6 +15,8 @@
   --spacing-lg: 2rem;
   --border-radius: 20px;
   --transition: all 0.3s ease;
+  --max-width-mobile: 480px;
+  --max-width-desktop: 1200px;
 }
 
 /* Reset & Base Styles */
@@ -36,7 +38,7 @@ body {
   line-height: 1.6;
   color: var(--color-text);
   background-color: var(--color-background);
-  max-width: 480px;
+  max-width: var(--max-width-mobile);
   margin: 0 auto;
   overflow-x: hidden;
 }
@@ -84,6 +86,7 @@ hr {
   top: 0;
   margin: 0;
   width: 100%;
+  z-index: 1000;
 }
 
 .header-content {
@@ -392,27 +395,6 @@ hr {
   font-size: 1.2rem;
 }
 
-/* Responsive adjustments for About section */
-@media (max-width: 480px) {
-  .about-card {
-    padding: 1rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  }
-
-  .about-card-title {
-    font-size: 1.1rem;
-  }
-
-  .qualifications-list {
-    font-size: 0.85rem;
-  }
-
-  .about-card .headshot-placeholder {
-    width: 60px;
-    height: 60px;
-  }
-}
-
 /* Pillar Cards */
 .pillar-card {
   background-color: var(--color-text-white);
@@ -600,4 +582,201 @@ hr {
 .footer p {
   color: rgba(255, 255, 255, 0.6);
   font-size: 0.8rem;
+}
+
+/* ========================================
+   DESKTOP/TABLET RESPONSIVE STYLES
+   ======================================== */
+
+@media (min-width: 768px) {
+  body {
+    max-width: var(--max-width-desktop);
+    font-size: 18px;
+  }
+
+  .main-content {
+    padding: var(--spacing-lg) var(--spacing-lg);
+  }
+
+  .tagline {
+    font-size: 3rem;
+  }
+
+  .sub-tagline {
+    font-size: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  /* Video section reasonable width */
+  .video-section {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Comparison columns better spacing */
+  .comparison-container {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: var(--spacing-md);
+  }
+
+  .comparison-column {
+    padding: var(--spacing-lg);
+  }
+
+  .comparison-column h4 {
+    font-size: 1.2rem;
+  }
+
+  .comparison-list {
+    font-size: 1rem;
+  }
+
+  /* Pillar cards styling */
+  .fat-loss-section {
+    display: grid;
+    gap: var(--spacing-lg);
+  }
+
+  .pillar-card {
+    padding: var(--spacing-lg);
+  }
+
+  .pillar-title {
+    font-size: 1.5rem;
+  }
+
+  .pillar-list {
+    font-size: 1.1rem;
+  }
+
+  .pillar-image img {
+    height: 100px;
+  }
+
+  /* Transformation images in grid */
+  .transformations-section > div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .transformation-img {
+    margin-bottom: 0;
+  }
+
+  /* About section */
+  .about-card {
+    padding: var(--spacing-lg);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .about-card-title {
+    font-size: 1.75rem;
+  }
+
+  .about-card .headshot-placeholder {
+    width: 120px;
+    height: 120px;
+  }
+
+  .qualifications-list {
+    font-size: 1.1rem;
+  }
+
+  /* FAQ items */
+  .faq-section {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .faq-question {
+    font-size: 1.1rem;
+    padding: var(--spacing-md);
+  }
+
+  .faq-answer p {
+    font-size: 1rem;
+    padding: 0 var(--spacing-md) var(--spacing-md);
+  }
+
+  /* Email section */
+  .email-section {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .email-intro {
+    font-size: 1.3rem;
+  }
+
+  /* Buttons */
+  .btn {
+    font-size: 1.3rem;
+    padding: 1.2rem 2.5rem;
+  }
+
+  .btn-primary {
+    max-width: 400px;
+  }
+
+  #challenge-button {
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+  }
+
+  /* Header banner */
+  .header-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .thin-banner h3 {
+    font-size: 1.1rem;
+  }
+
+  .challenge-link {
+    font-size: 1.2rem;
+  }
+
+  .cta-quote {
+    font-size: 1.1rem;
+  }
+}
+
+/* Extra large screens */
+@media (min-width: 1400px) {
+  .main-content {
+    padding: var(--spacing-lg) 4rem;
+  }
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 480px) {
+  .about-card {
+    padding: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  }
+
+  .about-card-title {
+    font-size: 1.1rem;
+  }
+
+  .qualifications-list {
+    font-size: 0.85rem;
+  }
+
+  .about-card .headshot-placeholder {
+    width: 60px;
+    height: 60px;
+  }
 }
