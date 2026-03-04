@@ -181,6 +181,43 @@ hr {
   font-size: 15px;
 }
 
+.inquiry-section {
+  display: flex;
+  justify-content: center;
+  margin: var(--spacing-lg) auto;
+  padding: 0;
+}
+
+.inquiry-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+  background: var(--color-text-white);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: var(--transition);
+  width: 100%;
+}
+
+.inquiry-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+.inquiry-icon {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-xs);
+}
+
+.inquiry-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
 /* Button Styles */
 .btn {
   display: inline-block;
